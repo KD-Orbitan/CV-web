@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (previewWindow) {
                 const previewUrl = link.getAttribute('data-preview-url');
                 previewWindow.style.display = 'block';
-                overlay.style.display = 'block'; // Hiện overlay
+                overlay.style.display = 'block';
                 const iframe = previewWindow.querySelector('iframe');
                 iframe.src = previewUrl;
             }
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const previewWindow = button.closest('.preview-window');
             if (previewWindow) {
                 previewWindow.style.display = 'none';
-                overlay.style.display = 'none'; // Ẩn overlay
+                overlay.style.display = 'none';
                 const iframe = previewWindow.querySelector('iframe');
-                iframe.src = '';
+                iframe.src = ''; // Reset iframe src để dừng load
             }
         });
     });
